@@ -19,6 +19,7 @@ AMushroom::AMushroom()
 	//Dejamos el objeto activado
 	IsMushroomActive = true;
 
+	VelocidadDeGiro = FRotator(0.0);
 
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -35,7 +36,10 @@ void AMushroom::BeginPlay()
 // Called every frame
 void AMushroom::Tick( float DeltaTime )
 {
+
 	Super::Tick( DeltaTime );
+
+	AddRotation();
 
 }
 
@@ -52,4 +56,10 @@ void AMushroom::OnCollected()
 	Destroy();
 }
 
+void AMushroom::AddRotation()
+{
+
+	AddActorLocalRotation(VelocidadDeGiro);
+
+}
 

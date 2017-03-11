@@ -22,7 +22,7 @@ public:
 
 
 	void OnCollected();
-
+	void AddRotation();
 
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mushroom)
@@ -34,6 +34,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mushroom)
 	bool IsMushroomActive;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mushroom)
+	FRotator VelocidadDeGiro;
 
 
 
