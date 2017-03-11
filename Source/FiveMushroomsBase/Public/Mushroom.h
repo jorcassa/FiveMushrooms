@@ -20,6 +20,22 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
+
+	void OnCollected();
+
+
 	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mushroom)
+	USphereComponent* BaseCollisionComponent = nullptr;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Mushroom)
+	UStaticMeshComponent* MeshMushroom = nullptr;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Mushroom)
+	bool IsMushroomActive;
+
+
+
+
 	
 };
